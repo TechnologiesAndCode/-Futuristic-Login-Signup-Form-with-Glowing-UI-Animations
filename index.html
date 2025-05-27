@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Animated Auth Form</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="auth-wrapper">
+    <div class="form-container" id="loginForm">
+      <h1 class="title">🔐 Login</h1>
+      <form>
+        <div class="form-control">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="form-control">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" id="login-password" required>
+          <label>Password</label>
+          <span class="toggle-password" onclick="togglePassword('login-password')">👁️</span>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+        <p class="text">Don't have an account? <a href="#" onclick="switchForm('signup')">Sign Up</a></p>
+      </form>
+    </div>
+
+    <div class="form-container hidden" id="signupForm">
+      <h1 class="title">📝 Sign Up</h1>
+      <form>
+        <div class="form-control">
+          <i class="fas fa-user icon"></i>
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+
+        <div class="form-control">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+
+        <div class="form-control">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" id="signup-password" required>
+          <label>Password</label>
+          <span class="toggle-password" onclick="togglePassword('signup-password')">👁️</span>
+        </div>
+
+        <button class="btn" type="submit">Sign Up</button>
+        <p class="text">Already have an account? <a href="#" onclick="switchForm('login')">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
